@@ -319,7 +319,7 @@ function App() {
           easing="ease-out"
           initialOpacity={0}
         >
-          <div className="w-full mt-10 flex items-start flex-col">
+          <div className="w-full mt-10 flex items-center flex-col">
             <p className="text-gray-200/50 font-quick text-[3vh]">
               Trying to improve and expand my
               <span className="text-white"> Tech Stack</span>
@@ -351,7 +351,7 @@ function App() {
           <CoolPill slug="wordpress" text="Wordpress"></CoolPill>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-start mt-10 border-t-1 h-full border-gray-600/50">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center mt-10 border-t-1 h-full border-gray-600/50">
         <FadeContent
           blur={true}
           delay={150}
