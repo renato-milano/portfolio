@@ -1,0 +1,43 @@
+import React from "react";
+import FadeContent from "../Animations/FadeContent/FadeContent";
+import AnimatedContent from "../Animations/AnimatedContent/AnimatedContent";
+interface CoolPillProps {
+  slug: string;
+  text: string;
+}
+
+function CoolPill({ slug, text }: CoolPillProps) {
+  return (
+    <>
+      <AnimatedContent
+        distance={0}
+        direction="vertical"
+        reverse={false}
+        config={{ tension: 75, friction: 45 }}
+        initialOpacity={0}
+        animateOpacity
+        delay={500}
+        scale={1.5}
+        threshold={0.2}
+      >
+        <div className="group relative flex items-center justify-center transition-transform duration-300 gap-2 rounded-xl hover:scale-125 border px-4 py-1.5 text-sm text-white/80 lg:text-base bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] ">
+          <img
+            height="18"
+            width="18"
+            alt="HTML"
+            src={"https://cdn.simpleicons.org/" + slug}
+            className="mr-0-1 w-4 transition-transform duration-300 group-hover:scale-125 lg:w-5"
+          />
+          <span className="relative">
+            <span className="animate-gradient-x text-colorfull absolute inset-0 h-full w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              {text}
+            </span>
+            <span className="transition-colors duration-300">{text}</span>
+          </span>
+        </div>
+      </AnimatedContent>
+    </>
+  );
+}
+
+export default CoolPill;
