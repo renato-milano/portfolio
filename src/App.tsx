@@ -333,8 +333,12 @@ function App() {
           <CoolPill slug="typescript" text="Typescript" />
           <CoolPill slug="react" text="ReactJS" />
           <CoolPill slug="react" text="React Native" />
+          <CoolPill slug="expo/ffffff" text="Expo" />
+          <CoolPill slug="android" text="Android JDK" />
           <CoolPill slug="tailwindcss" text="TailwindCSS" />
           <CoolPill slug="openai" text="OpenAI" />
+          <CoolPill slug="coffeescript/ffffff" text="Java"></CoolPill>
+          <CoolPill slug="selenium/ffffff" text="Selenium" />
           <CoolPill slug="python" text="Python" />
           <CoolPill slug="flask/ffffff" text="Flask" />
           <CoolPill slug="mysql" text="MySQL" />
