@@ -13,9 +13,9 @@ import handsVideo from "./assets/videos/hands.mp4";
 import MoreButton from "./component/ScrollButton";
 import CoolPill from "./component/CoolPill";
 function App() {
-  const firstStep = useRef(null);
-  const secondStep = useRef(null);
-  const thirdStep = useRef(null);
+  const firstStep = useRef<HTMLDivElement>(null);
+  const secondStep = useRef<HTMLDivElement>(null);
+  const thirdStep = useRef<HTMLDivElement>(null);
   let hey = "Hello there!";
   let descritpion = "Solution Developer";
   let TitleClass = "text-white md:text-bigger text-[5vh] font-quick";
@@ -24,7 +24,9 @@ function App() {
   function handleAnimationComplete() {
     console.log("Animation completed!");
     setTimeout(() => {
-      firstStep.current.scrollIntoView({ behavior: "smooth" });
+      if (firstStep.current) {
+        firstStep.current.scrollIntoView({ behavior: "smooth" });
+      }
     }, 500);
     setTimeout(() => {
       if (secondStep.current) {
@@ -33,7 +35,9 @@ function App() {
       }
     }, 3000);
     setTimeout(() => {
-      thirdStep.current.scrollIntoView({ behavior: "smooth" });
+      if (thirdStep.current) {
+        thirdStep.current.scrollIntoView({ behavior: "smooth" });
+      }
     }, 4000);
   }
   return (
@@ -45,7 +49,6 @@ function App() {
           delay={150}
           animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
           animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing="easeOutCubic"
           threshold={0.2}
           rootMargin="-50px"
           onLetterAnimationComplete={handleAnimationComplete}
@@ -90,7 +93,6 @@ function App() {
               delay={50}
               animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
               animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-              easing="easeOutCubic"
               threshold={0.2}
               rootMargin="-50px"
               onLetterAnimationComplete={() => {}}
