@@ -1,7 +1,8 @@
 import "./App.css";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import BlurText from "./TextAnimations/BlurText/BlurText";
 import SplitText from "./TextAnimations/SplitText/SplitText";
+// @ts-ignore
 import RotatingText from "./TextAnimations/RotatingText/RotatingText";
 import profile from "./assets/images/profile_full.jpg";
 import FadeContent from "./Animations/FadeContent/FadeContent";
@@ -17,10 +18,8 @@ function App() {
   const secondStep = useRef<HTMLDivElement>(null);
   const thirdStep = useRef<HTMLDivElement>(null);
   let hey = "Hello there!";
-  let descritpion = "Solution Developer";
   let TitleClass = "text-white md:text-bigger text-[5vh] font-quick";
   let HeaderClass = "text-white md:text-bigger text-[3vh] font-quick";
-  let DescriptionClass = "text-white/50 md:text-bigger text-[3vh] font-quick";
   function handleAnimationComplete() {
     console.log("Animation completed!");
     setTimeout(() => {

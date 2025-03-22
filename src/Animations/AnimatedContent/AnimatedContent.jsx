@@ -1,24 +1,7 @@
-/*
-	Installed from https://reactbits.dev/ts/tailwind/
-*/
+import { useRef, useEffect, useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
 
-import { useRef, useEffect, useState, ReactNode } from "react";
-import { useSpring, animated, SpringConfig } from "@react-spring/web";
-
-interface AnimatedContentProps {
-  children: ReactNode;
-  distance?: number;
-  direction?: "vertical" | "horizontal";
-  reverse?: boolean;
-  config?: SpringConfig;
-  initialOpacity?: number;
-  animateOpacity?: boolean;
-  scale?: number;
-  threshold?: number;
-  delay?: number;
-}
-
-const AnimatedContent: React.FC<AnimatedContentProps> = ({
+const AnimatedContent = ({
   children,
   distance = 100,
   direction = "vertical",
@@ -31,16 +14,15 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
   delay = 0,
 }) => {
   const [inView, setInView] = useState(false);
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef();
 
   useEffect(() => {
-    const element = ref.current;
-    if (!element) return;
+    if (!ref.current) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          observer.unobserve(element);
+          observer.unobserve(ref.current);
           setTimeout(() => {
             setInView(true);
           }, delay);
@@ -49,12 +31,12 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
       { threshold }
     );
 
-    observer.observe(element);
+    observer.observe(ref.current);
 
     return () => observer.disconnect();
   }, [threshold, delay]);
 
-  const directions: Record<"vertical" | "horizontal", string> = {
+  const directions = {
     vertical: "Y",
     horizontal: "X",
   };

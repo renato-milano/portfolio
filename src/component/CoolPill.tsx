@@ -1,5 +1,4 @@
-import React from "react";
-import FadeContent from "../Animations/FadeContent/FadeContent";
+// @ts-ignore
 import AnimatedContent from "../Animations/AnimatedContent/AnimatedContent";
 interface CoolPillProps {
   slug: string;
