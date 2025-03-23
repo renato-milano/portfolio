@@ -137,7 +137,7 @@ function App() {
               easing="ease-out"
               initialOpacity={0}
             >
-              <div className="font-quick text-gray-400 text-[1.7vh] md:text-xl rounded-xl border-white  p-4 mt-10 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-6 md:col-span-3 lg:col-span-4">
+              <div className="font-quick text-gray-400 text-[1.7vh] md:text-xl rounded-xl border-white  p-4 mt-10  transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-6 md:col-span-3 lg:col-span-4">
                 I'm a <span className="text-white">full-stack</span> developer
                 passionate about building innovative and scalable solutions,
                 from <span className="text-white">AI driven</span> applications
@@ -381,7 +381,7 @@ function App() {
           easing="ease-out"
           initialOpacity={0}
         >
-          <div className="font-quick text-gray-400 text-[1.7vh] md:text-xl rounded-xl border-white p-4 mt-10 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]">
+          <div className="font-quick text-gray-400 text-[1.7vh] md:text-xl rounded-xl border-white p-4 mt-10  transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]">
             Great <span className="text-white">ideas</span> deserve great{" "}
             <span className="text-white">execution.</span> Whether you need a
             full-stack application, an AI-powered solution, or custom software,
