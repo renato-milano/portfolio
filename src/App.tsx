@@ -101,7 +101,7 @@ function App() {
               delay={250}
               duration={1000}
               easing="ease-out"
-              className="flex flex-row justify-center items-center md:ml-15 ml-2"
+              className="flex flex-col md:flex-row justify-center items-center md:ml-15 "
               initialOpacity={0}
             >
               <span className="font-quick px-2 sm:px-2 md:text-2xl bg-transparent text-gray-100/70 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg">
@@ -114,7 +114,7 @@ function App() {
                   "Passionate Coder",
                   "Random Stupid Guy",
                 ]}
-                mainClassName=" font-quick md:w-[30vh] w-[18vh] md:text-2xl flex items-start justify-start bg-transparent text-gray-100/70 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                mainClassName=" font-quick md:w-[30vh]  md:text-2xl flex items-start justify-start bg-transparent text-gray-100/70 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
