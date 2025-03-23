@@ -20,17 +20,17 @@ export default function ProjectCard({
   technology,
 }: ProjectProps) {
   return (
-    <div className="group font-quick relative flex flex-col justify-between overflow-hidden rounded-xl bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-6 md:col-span-3 lg:col-span-4">
+    <div className="group font-quick relative flex flex-col justify-between overflow-hidden rounded-xl transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-6 md:col-span-3 lg:col-span-4">
       {image && (
         <img
-          className="w-full h-72 object-cover rounded-t-2xl [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)]"
+          className="w-full h-72 object-cover rounded-t-2xl bg-black [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)]"
           src={image}
           alt={title}
         />
       )}
       {video && (
         <video
-          className="w-full h-72 object-cover rounded-t-2xl [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)]"
+          className="w-full h-72 object-cover rounded-t-2xl bg-black [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)]"
           src={video}
           autoPlay
           loop
@@ -38,7 +38,9 @@ export default function ProjectCard({
         ></video>
       )}
       <div className="p-2 flex justify-start items-center w-full h-8">
-        <h2 className="text-base text-gray-100 font-semibold">{title}</h2>
+        <h2 className="text-base text-white text-gray-100 font-semibold">
+          {title}
+        </h2>
       </div>
       <div className="p-2 text-start">
         <p className="text-gray-300 text-xs mt-2">{description}</p>
@@ -60,10 +62,10 @@ export default function ProjectCard({
         >
           <img
             src={buttonImage}
-            className="w-5 h-5 object-contain rounded-t-2xl"
+            className="w-5 h-5 object-contain bg-black rounded-t-2xl"
             alt=""
           />
-          {buttonText}
+          <p className="text-white">{buttonText}</p>
         </div>
       </div>
     </div>
