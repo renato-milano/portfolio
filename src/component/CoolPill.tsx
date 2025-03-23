@@ -19,7 +19,7 @@ function CoolPill({ slug, text }: CoolPillProps) {
         scale={1.5}
         threshold={0.2}
       >
-        <div className="group relative flex items-center justify-center transition-transform duration-300 gap-2 rounded-xl hover:scale-125 border px-4 py-1.5 text-sm text-white/80 lg:text-base bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] ">
+        <div className="group relative flex items-center justify-center transition-transform duration-300 gap-2 rounded-xl hover:scale-125 border px-4 py-1.5 text-sm text-white/80 lg:text-base [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] ">
           <img
             height="18"
             width="18"
