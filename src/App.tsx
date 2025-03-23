@@ -1,5 +1,5 @@
 import "./App.css";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import BlurText from "./TextAnimations/BlurText/BlurText";
 import SplitText from "./TextAnimations/SplitText/SplitText";
 // @ts-ignore
@@ -17,6 +17,10 @@ function App() {
   const firstStep = useRef<HTMLDivElement>(null);
   const secondStep = useRef<HTMLDivElement>(null);
   const thirdStep = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    document.documentElement.classList.add("dark"); // Forza il tema scuro
+    localStorage.setItem("theme", "dark"); // Imposta il tema salvato
+  }, []);
   let hey = "Hello there!";
   let TitleClass = "text-white md:text-bigger text-[5vh] font-quick";
   let HeaderClass = "text-white md:text-bigger text-[3vh] font-quick";
