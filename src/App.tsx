@@ -44,7 +44,7 @@ function App() {
     }, 4000);
   }
   return (
-    <>
+    <div className="bg-black dark">
       <div className="text-center flex flex-col justify-center items-center h-screen">
         <SplitText
           text={hey}
@@ -405,7 +405,7 @@ function App() {
           </div>
         </FadeContent>
       </div>
-    </>
+    </div>
   );
 }
 
