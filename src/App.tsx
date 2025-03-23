@@ -113,10 +113,14 @@ function App() {
               </span>
               <RotatingText
                 texts={[
-                  "Dream Maker",
-                  "Solution Developer",
-                  "Passionate Coder",
+                  "Software Engineer",
                   "Random Stupid Guy",
+                  "Solution Developer",
+                  "AI Enthusiast",
+                  "Creative Thinker",
+                  "Dream Maker",
+                  "Passionate Coder",
+                  "Pizza Eater",
                 ]}
                 mainClassName=" font-quick md:w-[30vh]  md:text-2xl flex items-start justify-start bg-transparent text-gray-100/70 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                 staggerFrom={"last"}
