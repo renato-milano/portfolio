@@ -69,6 +69,7 @@ function App() {
       <div className="h-screen md:h-full">
         <div className="text-center flex flex-col justify-between items-center h-[90%] md:h-full">
           <div className="flex flex-col justify-center items-center">
+            
             <FadeContent
               blur={true}
               delay={50}
@@ -79,7 +80,7 @@ function App() {
               <style>
                 {`
                   .grayscale-image {
-                    filter: grayscale(100%);
+                    filter: grayscale(25%);
                   }
                 `}
               </style>
@@ -114,7 +115,6 @@ function App() {
               <RotatingText
                 texts={[
                   "Software Engineer",
-                  "Random Stupid Guy",
                   "Solution Developer",
                   "AI Enthusiast",
                   "Creative Thinker",
@@ -122,7 +122,7 @@ function App() {
                   "Passionate Coder",
                   "Pizza Eater",
                 ]}
-                mainClassName=" font-quick md:w-[30vh]  md:text-2xl flex items-start justify-start bg-transparent text-gray-100/70 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                mainClassName=" font-quick md:w-[31vh]  md:text-2xl flex items-start justify-start bg-transparent text-gray-100/70 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
