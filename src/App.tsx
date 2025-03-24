@@ -15,6 +15,8 @@ import MoreButton from "./component/ScrollButton";
 import CoolPill from "./component/CoolPill";
 // @ts-ignore
 import ClientsGallery from "./component/ClientsGallery";
+import NavBar from "./component/NavBar";
+
 function App() {
   const firstStep = useRef<HTMLDivElement>(null);
   const secondStep = useRef<HTMLDivElement>(null);
@@ -70,8 +72,7 @@ function App() {
       <div ref={thirdStep} className="h-12"></div>
       <div className="h-screen md:h-full">
         <div className="text-center flex flex-col justify-between items-center h-[90%] md:h-full">
-          <div className="flex flex-col justify-center items-center">
-            
+          <div className="flex flex-col md:mt-20 mt-20 justify-center items-center">
             <FadeContent
               blur={true}
               delay={50}
@@ -143,7 +144,7 @@ function App() {
               easing="ease-out"
               initialOpacity={0}
             >
-              <div className="font-quick text-gray-400 text-[1.7vh] md:text-xl rounded-xl border-white  p-4 mt-10  transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-6 md:col-span-3 lg:col-span-4">
+              <div className="font-quick text-gray-400 text-[1.7vh] md:text-xl rounded-xl border-white  p-4 mt-5  transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-6 md:col-span-3 lg:col-span-4">
                 I'm a <span className="text-white">full-stack</span> developer
                 passionate about building innovative and scalable solutions,
                 from <span className="text-white">AI driven</span> applications
@@ -161,7 +162,7 @@ function App() {
               easing="ease-out"
               initialOpacity={0}
             >
-              <div className="flex flex-row justify-center items-center mt-10 space-x-4">
+              <div className="flex flex-row justify-center items-center mt-5 space-x-4">
                 <div className="border border-gray-600/25 bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800 text-gray-100/75 font-quick py-2 px-6 rounded-lg transition duration-300 font-quick text-xs">
                   Download CV
                 </div>
@@ -171,7 +172,7 @@ function App() {
               </div>
             </FadeContent>
             <FadeContent
-              className="mt-20"
+              className="mt-17"
               blur={true}
               delay={2000}
               duration={1000}
@@ -185,7 +186,7 @@ function App() {
       </div>
 
       <div className="h-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 h-[90%] md:items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-5 h-[90%] md:items-center">
           <FadeContent
             blur={true}
             delay={150}
@@ -320,8 +321,21 @@ function App() {
           </FadeContent>
         </div>
       </div>
-      <ClientsGallery />
-      <div className="mt-10 border-t-1 grid grid-cols-1 md:grid-cols-2 border-gray-600/50">
+      <FadeContent
+        blur={true}
+        delay={250}
+        duration={1000}
+        easing="ease-out"
+        initialOpacity={0}
+      >
+        <div className="mt-10 h-full w-full grid grid-cols-2 items-center  grid border-gray-600/50 ">
+          <div className=" mt-10">
+            <ClientsGallery />
+          </div>
+          <div className=" mt-10">BLA BLA BLA</div>
+        </div>
+      </FadeContent>
+      <div className="mt-15 grid grid-cols-1 md:grid-cols-2 border-gray-600/50">
         <FadeContent
           blur={true}
           delay={250}
