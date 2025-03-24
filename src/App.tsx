@@ -13,6 +13,8 @@ import githubLogo from "./assets/images/github-mark-white.svg";
 import handsVideo from "./assets/videos/hands.mp4";
 import MoreButton from "./component/ScrollButton";
 import CoolPill from "./component/CoolPill";
+// @ts-ignore
+import ClientsGallery from "./component/ClientsGallery";
 function App() {
   const firstStep = useRef<HTMLDivElement>(null);
   const secondStep = useRef<HTMLDivElement>(null);
@@ -318,7 +320,7 @@ function App() {
           </FadeContent>
         </div>
       </div>
-
+      <ClientsGallery />
       <div className="mt-10 border-t-1 grid grid-cols-1 md:grid-cols-2 border-gray-600/50">
         <FadeContent
           blur={true}
