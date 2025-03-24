@@ -61,11 +61,11 @@ const ClientsGallery = () => {
             </div>
           );
         })}
-        <div className="absolute p-4 group-hover:-translate-y-5 transition flex-col items-start duration-300 group-hover:shadow-4xl inset-0 h-[50%] top-45 right-30 flex items-center justify-center text-white text-2xl font-bold">
-          <h2 className="font-quick text-3xl text-gray-200/75 text-weight-500 text-start group-hover:text-white group-hover:font-bold transition duration-300">
+        <div className="absolute p-4 group-hover:-translate-y-5 transition flex-col items-start  duration-300 group-hover:shadow-4xl inset-0 h-[50%] top-45 right-30  flex items-center justify-center text-white text-xl font-bold">
+          <h2 className="font-quick text-2xl text-gray-200/75 text-weight-500 text-start group-hover:text-white group-hover:font-bold transition duration-300">
             Contribution
           </h2>
-          <p className="font-quick text-xl text-gray-200/50 text-start ">
+          <p className="font-quick text-base text-gray-200/50 text-start ">
             Continuous support, clear communication, and constant collaboration
             to turn{" "}
             <span className="group-hover:text-white transition duration-300">

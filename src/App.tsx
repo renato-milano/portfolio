@@ -15,7 +15,6 @@ import MoreButton from "./component/ScrollButton";
 import CoolPill from "./component/CoolPill";
 // @ts-ignore
 import ClientsGallery from "./component/ClientsGallery";
-import NavBar from "./component/NavBar";
 
 function App() {
   const firstStep = useRef<HTMLDivElement>(null);
@@ -328,7 +327,7 @@ function App() {
         easing="ease-out"
         initialOpacity={0}
       >
-        <div className="mt-10 h-full w-full grid grid-cols-2 items-center  grid border-gray-600/50 ">
+        <div className="invisible md:visible mt-10 h-full w-full grid grid-cols-2 items-center  grid border-gray-600/50 ">
           <div className=" mt-10">
             <ClientsGallery />
           </div>
