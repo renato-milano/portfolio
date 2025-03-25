@@ -11,9 +11,9 @@ type NavBarProps = {
 const NavBar = ({reference,show}:NavBarProps) => {
   const menuItems = [
     { label: "Home", href: "/home" },
-    { label: "Work", href: "/project" },
-    { label: "About", href: "/about" },
-    { label: "Blog", href: "/blog" },
+    { label: "Work", href: "/home" },
+    { label: "About", href: "/home" },
+    { label: "Blog", href: "/home" },
     { label: "Book a Call", isButton: true, special: true, href:"/BookCall" },
   ];
   const navigate = useNavigate()
