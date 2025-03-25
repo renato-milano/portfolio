@@ -71,7 +71,7 @@ function App() {
       <div ref={thirdStep} className="h-12"></div>
       <div className="h-screen md:h-full">
         <div className="text-center flex flex-col justify-between items-center h-[90%] md:h-full">
-          <div className="flex flex-col md:mt-15 lg:mt-10 mt-20 justify-center items-center">
+          <div className="flex flex-col md:mt-15 lg:mt-10 md:mt-20 justify-center items-center">
             <FadeContent
               blur={true}
               delay={50}
@@ -82,7 +82,7 @@ function App() {
               <style>
                 {`
                   .grayscale-image {
-                    filter: grayscale(25%);
+                    filter: grayscale(30%);
                   }
                 `}
               </style>
@@ -339,11 +339,11 @@ function App() {
         easing="ease-out"
         initialOpacity={0}
       >
-        <div className="mt-10 h-full w-full grid grid-cols-1 md:grid-cols-2 items-center  grid border-gray-600/50 ">
+        <div className="mt-10 h-full w-full grid grid-cols-1 md:grid-cols-2 items-center bg-black grid border-gray-600/50 ">
           <div className=" mt-10">
             <ClientsGallery />
           </div>
-          <div className=" mt-10 text-gray-200/50 font-quick md:text-[3vh] text-[2vh] md:pl-10">
+          <div className=" mt-10 text-gray-200/50 font-quick md:text-[3vh] text-[2vh] md:pl-10 bg-black">
             Effective <span className="text-white">communication</span> and
             constant <span className="text-white">collaboration</span> are at
             the heart of my work. I believe that great results come from open
