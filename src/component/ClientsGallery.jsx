@@ -1,9 +1,9 @@
 import { useState } from "react";
 import React from "react";
-import { ciro, tony } from "../assets/assets";
+import { ciro, tony, davide } from "../assets/assets";
 import { TbHeartHandshake } from "react-icons/tb";
 
-const videos = [ciro, tony, ciro, tony];
+const videos = [ciro, tony, davide, tony];
 
 const ClientsGallery = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);

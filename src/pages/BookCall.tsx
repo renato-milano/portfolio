@@ -42,7 +42,7 @@ function BookCall() {
         </p>
         <p className="my-4 text-center text-lg text-balance text-white/65 md:text-2xl">
           If any of the times don't work for you,
-          <br className="hidden md:block" />j ust shoot me an
+          <br className="hidden md:block" /> just shoot me an
           <a
             href="mailto:renatomilanodevgmail.com?subject=Let's%20catch%20up%20for%20a%20cool%20opportunity!"
             target="_blank"
