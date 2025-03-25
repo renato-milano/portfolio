@@ -1,14 +1,16 @@
 import { useState } from "react";
 import React from "react";
 import { ciro, tony } from "../assets/assets";
+import { TbHeartHandshake } from "react-icons/tb";
 
 const videos = [ciro, tony, ciro, tony];
 
 const ClientsGallery = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   return (
-    <div className="group relative  rounded-xl h-[50vh] grid grid-cols-1 flex items-center border-2 justify-center overflow-hidden transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]">
+    <div className="group relative bg-black rounded-xl h-[50vh] grid grid-cols-1 flex items-center border-2 justify-center overflow-hidden transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]">
       {/* Sfondo con sfumatura */}
       <div
         className="absolute inset-0"
@@ -20,7 +22,7 @@ const ClientsGallery = () => {
       {/* Contenitore video */}
       <div
         aria-hidden="true"
-        className="flex absolute top-24 left-[52%] -translate-x-1/2 -translate-y-1/2 lg:top-[45%]"
+        className="flex absolute top-24 left-[52%] -translate-x-1/2 -translate-y-30 top-[50%] lg:top-[45%] "
       >
         {videos.map((src, index) => {
           // Calcoliamo la traslazione dinamica
@@ -51,6 +53,7 @@ const ClientsGallery = () => {
                 muted
                 loop
                 playsInline
+                autoPlay={isMobile ? true : false}
                 preload="metadata"
                 className="scale-105"
                 onMouseEnter={(e) => e.target.play()}
@@ -61,15 +64,27 @@ const ClientsGallery = () => {
             </div>
           );
         })}
-        <div className="absolute p-4 group-hover:-translate-y-5 transition flex-col items-start  duration-300 group-hover:shadow-4xl inset-0 h-[50%] top-45 right-30  flex items-center justify-center text-white text-xl font-bold">
-          <h2 className="font-quick text-2xl text-gray-200/75 text-weight-500 text-start group-hover:text-white group-hover:font-bold transition duration-300">
-            Contribution
-          </h2>
+        <div className="absolute p-4 group-hover:-translate-y-5 transition flex-col items-start duration-300 group-hover:shadow-4xl inset-0 h-[50%] lg:top-55 top-50 md:right-30 right-60 w-[80%] md:w-[90%] lg:w-[95%] pl-25 sm:pl-20 xl:pl-10 flex items-center justify-center text-white text-xl font-bold">
+          <div className="flex font-quick text-2xl text-gray-200/75 text-weight-500 text-start text-gray-300/25 group-hover:text-white group-hover:font-bold transition duration-300">
+            Collaboration
+            <TbHeartHandshake className="ml-4" />
+          </div>
           <p className="font-quick text-base text-gray-200/50 text-start ">
-            Continuous support, clear communication, and constant collaboration
-            to turn{" "}
+            Continuous{" "}
             <span className="group-hover:text-white transition duration-300">
-              every idea into success.
+              support
+            </span>
+            , clear{" "}
+            <span className="group-hover:text-white transition duration-300">
+              communication
+            </span>
+            , and constant{" "}
+            <span className="group-hover:text-white transition duration-300">
+              collaboration
+            </span>{" "}
+            to turn every idea into{" "}
+            <span className="group-hover:text-white transition duration-300">
+              success.
             </span>
           </p>
         </div>

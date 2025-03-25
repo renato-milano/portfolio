@@ -71,7 +71,7 @@ function App() {
       <div ref={thirdStep} className="h-12"></div>
       <div className="h-screen md:h-full">
         <div className="text-center flex flex-col justify-between items-center h-[90%] md:h-full">
-          <div className="flex flex-col md:mt-20 mt-20 justify-center items-center">
+          <div className="flex flex-col md:mt-15 lg:mt-10 mt-20 justify-center items-center">
             <FadeContent
               blur={true}
               delay={50}
@@ -111,7 +111,7 @@ function App() {
               className="flex flex-col md:flex-row justify-center items-center  "
               initialOpacity={0}
             >
-              <span className="font-quick px-2 sm:px-2 md:text-2xl bg-transparent text-gray-100/70 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg">
+              <span className="font-quick lg:pl-12 px-2 sm:px-2 md:text-2xl bg-transparent text-gray-100/70 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg">
                 Just a{" "}
               </span>
               <RotatingText
@@ -124,7 +124,7 @@ function App() {
                   "Passionate Coder",
                   "Pizza Eater",
                 ]}
-                mainClassName=" font-quick md:w-[31vh]  md:text-2xl flex items-start justify-start bg-transparent text-gray-100/70 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                mainClassName=" font-quick md:w-[31vh] lg:w-[22vh] md:text-2xl flex items-start justify-start bg-transparent text-gray-100/70 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
@@ -135,7 +135,6 @@ function App() {
                 rotationInterval={2500}
               />
             </FadeContent>
-
             <FadeContent
               blur={true}
               delay={350}
@@ -143,7 +142,20 @@ function App() {
               easing="ease-out"
               initialOpacity={0}
             >
-              <div className="font-quick text-gray-400 text-[1.7vh] md:text-xl rounded-xl border-white  p-4 mt-5  transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-6 md:col-span-3 lg:col-span-4">
+              <div className="font-quick text-gray-400 text-[1.7vh] md:text-3xl rounded-xl border-white  p-4 mt-5 lg:mt-15 transform-gpu bg-black">
+                I help founders turn <span className="text-white">ideas</span>{" "}
+                into creative and functional
+                <span className="text-white"> solutions.</span>
+              </div>
+            </FadeContent>
+            <FadeContent
+              blur={true}
+              delay={350}
+              duration={1000}
+              easing="ease-out"
+              initialOpacity={0}
+            >
+              <div className="font-quick text-gray-400 text-[1.7vh] md:text-xl rounded-xl border-white  p-4 mt-5 lg:mt-15 transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-6 md:col-span-3 lg:col-span-4">
                 I'm a <span className="text-white">full-stack</span> developer
                 passionate about building innovative and scalable solutions,
                 from <span className="text-white">AI driven</span> applications
@@ -161,7 +173,7 @@ function App() {
               easing="ease-out"
               initialOpacity={0}
             >
-              <div className="flex flex-row justify-center items-center mt-5 space-x-4">
+              <div className="flex flex-row justify-center items-center mt-5 lg:mt-20 space-x-4">
                 <div className="border border-gray-600/25 bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800 text-gray-100/75 font-quick py-2 px-6 rounded-lg transition duration-300 font-quick text-xs">
                   Download CV
                 </div>
@@ -171,7 +183,7 @@ function App() {
               </div>
             </FadeContent>
             <FadeContent
-              className="mt-17"
+              className="mt-17 lg:mt-20"
               blur={true}
               delay={2000}
               duration={1000}
@@ -327,11 +339,18 @@ function App() {
         easing="ease-out"
         initialOpacity={0}
       >
-        <div className="invisible md:visible mt-10 h-full w-full grid grid-cols-2 items-center  grid border-gray-600/50 ">
+        <div className="mt-10 h-full w-full grid grid-cols-1 md:grid-cols-2 items-center  grid border-gray-600/50 ">
           <div className=" mt-10">
             <ClientsGallery />
           </div>
-          <div className=" mt-10">BLA BLA BLA</div>
+          <div className=" mt-10 text-gray-200/50 font-quick md:text-[3vh] text-[2vh] md:pl-10">
+            Effective <span className="text-white">communication</span> and
+            constant <span className="text-white">collaboration</span> are at
+            the heart of my work. I believe that great results come from open
+            dialogue, shared ideas, and a strong team spirit. By fostering clear
+            and proactive interactions, I ensure that every project runs
+            <span className="text-white">smoothly and successfully.</span>
+          </div>
         </div>
       </FadeContent>
       <div className="mt-15 grid grid-cols-1 md:grid-cols-2 border-gray-600/50">
