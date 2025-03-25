@@ -31,7 +31,7 @@ function Home() {
       <div ref={thirdStep} id="Home" className="h-12"></div>
       <div className="h-screen md:h-full">
         <div className="text-center flex flex-col justify-between items-center h-[90%] md:h-full">
-          <div className="flex flex-col md:mt-15 lg:mt-1 md:mt-20 justify-center items-center">
+          <div className="flex flex-col md:mt-[3vh] lg:mt-[2vw] md:mt-20 justify-center items-center">
             <FadeContent
               blur={true}
               delay={50}
@@ -42,14 +42,14 @@ function Home() {
               <style>
                 {`
                   .grayscale-image {
-                    filter: grayscale(30%);
+                    filter: grayscale(100%);
                   }
                 `}
               </style>
               <img
                 src={profile}
                 alt="hero"
-                className="h-32 w-32 grayscale-image md:h-32 md:w-32 md:mt-10 rounded-full object-cover  object-center"
+                className="md:h-[20vh] md:w-[20vh] w-32 h-32 grayscale-image md:mt-[1vh] rounded-full object-cover  object-center"
               />
             </FadeContent>
 
@@ -71,7 +71,7 @@ function Home() {
               className="flex flex-col md:flex-row justify-center items-center  "
               initialOpacity={0}
             >
-              <span className="font-quick xl:ml-[0vw] lg:ml-0 lg:pl-12 px-2 sm:px-2 md:text-2xl bg-transparent text-gray-100/70 overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg">
+              <span className="font-quick xl:pl-[5vw] md:pl-[8vw] lg:pl-[10vw] px-2 sm:px-2 md:text-2xl bg-transparent text-gray-100/70 overflow-hidden py-0.5 sm:py-1  justify-center rounded-lg">
                 Just a{" "}
               </span>
               <RotatingText
@@ -102,7 +102,7 @@ function Home() {
               easing="ease-out"
               initialOpacity={0}
             >
-              <div className="font-quick text-gray-400 text-[1.7vh] md:text-3xl rounded-xl border-white  p-4 mt-5 lg:mt-[1vh] xl:mt-[5vh] md:mt-15 transform-gpu bg-black">
+              <div className="font-quick text-gray-400 text-[1.7vh] md:text-3xl rounded-xl border-white  p-4 mt-5 lg:mt-[0vw] xl:mt-[1vw] md:mt-10 transform-gpu bg-black">
                 I help founders turn <span className="text-white">ideas</span>{" "}
                 into creative and functional
                 <span className="text-white"> solutions.</span>
@@ -115,12 +115,12 @@ function Home() {
               easing="ease-out"
               initialOpacity={0}
             >
-              <div className="font-quick text-gray-400 text-[1.7vh] md:text-xl rounded-xl border-white  p-4 mt-5 lg:mt-[1vh] transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-6 md:col-span-3 lg:col-span-4">
-                I'm a <span className="text-white">full-stack</span> software engineer
-                passionate about building innovative and scalable solutions,
-                from <span className="text-white">AI driven</span> applications
-                to robust software architectures. I turn ideas into reality by
-                combining modern technologies with a{" "}
+              <div className="font-quick text-gray-400 text-[1.7vh] md:text-xl rounded-xl border-white  p-4 mt-5 lg:mt-[1vw] transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-6 md:col-span-3 lg:col-span-4">
+                I'm a <span className="text-white">full-stack</span> software
+                engineer passionate about building innovative and scalable
+                solutions, from <span className="text-white">AI driven</span>{" "}
+                applications to robust software architectures. I turn ideas into
+                reality by combining modern technologies with a{" "}
                 <span className="text-white">problem-solving mindset</span>.
                 <br />
                 Explore my portfolio and see what I can create for you!
@@ -133,19 +133,22 @@ function Home() {
               easing="ease-out"
               initialOpacity={0}
             >
-              <div className="flex flex-row justify-center items-center mt-5 lg:mt-[2vh] space-x-4">
+              <div className="flex flex-row justify-center items-center mt-5 lg:mt-[1vw] space-x-4">
                 <div className="border border-gray-600/25 bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800 text-gray-100/75 font-quick py-2 px-6 rounded-lg transition duration-300 font-quick text-xs">
                   Download CV
                 </div>
-                <div                  onClick={
-                  ()=>{navigate("/BookCall",{replace:true})}
-                } className="border border-gray-600/25 bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800 text-gray-100/75 font-quick py-2 px-6 rounded-lg transition duration-300 font-quick text-xs">
+                <div
+                  onClick={() => {
+                    navigate("/BookCall", { replace: true });
+                  }}
+                  className="border border-gray-600/25 bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800 text-gray-100/75 font-quick py-2 px-6 rounded-lg transition duration-300 font-quick text-xs"
+                >
                   Book a Call
                 </div>
               </div>
             </FadeContent>
             <FadeContent
-              className="mt-17 lg:mt-[3vh]"
+              className="mt-17 lg:mt-[5vw] xl:mt-[1.5vw] pb-40"
               blur={true}
               delay={2000}
               duration={1000}
@@ -391,9 +394,9 @@ function Home() {
             <div className="flex flex-row justify-end items-center mt-10 space-x-4">
               <div
                 className="border border-gray-600/25 flex gap-4 font-quick py-1 px-6 items-center justify-center gap-2 rounded-xl bg-neutral-900 px5 py-2 shadow-[inset_0_2px_10px_#ffffff1f] rounded-lg transition duration-300 font-quick text-xs"
-                onClick={
-                    ()=>{navigate("/BookCall",{replace:true})}
-                  }
+                onClick={() => {
+                  navigate("/BookCall", { replace: true });
+                }}
               >
                 Book a Call
               </div>
