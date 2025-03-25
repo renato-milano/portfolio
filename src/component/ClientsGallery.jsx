@@ -26,9 +26,25 @@ const ClientsGallery = () => {
       >
         {videos.map((src, index) => {
           // Calcoliamo la traslazione dinamica
-          console.log("hoveredIndex", hoveredIndex + 1);
           let translateX = index * 10; // Offset base
           let rotationReset = ""; // Resetta la rotazione
+          let trasform = `translateX(-${translateX}px)`;
+          /*let trasform = "";
+          if (isMobile && index === 0) {
+            trasform = "translateX(90px) translateY(-100px)";
+          }
+          if (isMobile && index === 1) {
+            trasform = "translateX(-25px) translateY(50px)";
+          }
+          if (isMobile && index === 2) {
+            trasform = "translateX(-20px)translateY(60px)";
+          }
+          if (isMobile && index === 3) {
+            trasform = "translateX(-130px) translateY(-113px)";
+          }
+          if (!isMobile) {
+            trasform = `translateX(-${translateX}px)`;
+          }*/
           if (hoveredIndex !== null) {
             if (index === hoveredIndex - 1 && index >= 0) {
               //translateX += 90; // Sposta il precedente a sinistra
@@ -44,7 +60,7 @@ const ClientsGallery = () => {
                   ${index % 2 === 0 ? "rotate-12 " : "-rotate-12 "} 
                   hover:rotate-0 hover:scale-120`}
               style={{
-                transform: `translateX(-${translateX}px) ${rotationReset}`,
+                transform: { trasform },
               }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
