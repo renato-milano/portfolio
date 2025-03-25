@@ -25,7 +25,7 @@ const NavBar = ({reference,show}:NavBarProps) => {
   return (
     !isMobile && (
       <nav className={`fixed top-4 left-0 md:w-full md:flex md:justify-center z-50 transition duration-300 ${show ? "opacity-100" : "opacity-0"}`} ref={reference}>
-        <ul className="flex items-center gap-4 rounded-full border border-white/50 bg-white/15 md:px-6 md:py-3 backdrop-blur-sm shadow-md">
+        <ul className="flex items-center gap-4 rounded-full border border-white/15 bg-white/15 md:px-6 md:py-2 backdrop-blur-sm shadow-md">
           {menuItems.map((item, index) =>
             item.isButton ? (
               <li onClick={
@@ -34,8 +34,8 @@ const NavBar = ({reference,show}:NavBarProps) => {
                 <div
                   className={` cursor-pointer md:px-4 md:py-2 text-sm font-light transition-all duration-300 rounded-full ${
                     item.special
-                      ? "group bg-white/20 flex items-center hover:bg-white/30 hover:text-white/90"
-                      : "text-white/80 hover:text-white"
+                      ? "group bg-white/15 flex items-center hover:bg-white/30 hover:text-white/90"
+                      : "text-white/80 hover:text-white "
                   }`}
                 >
                   {item.label} {item.special&&(<IoMdArrowForward className="group-hover:ml-3 ml-1 transition-all duration-300"/>)}

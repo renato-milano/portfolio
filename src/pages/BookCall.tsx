@@ -17,7 +17,7 @@ function BookCall() {
     }
 
 </style>
-<NavBar></NavBar>
+<NavBar show={true}></NavBar>
 <div className="mt-30 mb-5 flex w-full flex-col items-center text-balance font-quick">
 <p className="flex items-center text-3xl font-bold md:text-7xl">Book a call
 <svg className="mx-4 hidden size-12 rotate-12 rounded-lg drop-shadow-lg md:block md:size-20" xmlns="http://www.w3.org/2000/svg" aria-label="Google Meet" role="img" viewBox="0 0 512 512">
