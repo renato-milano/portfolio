@@ -1,11 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+@import "tailwindcss";
+
 @font-face {
   font-family: Quicksand;
   src: url("./assets/fonts/Quicksand-Regular.ttf");
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-
-@import "tailwindcss";
 
 @theme {
   --color-cool-green: rgb(0 159 52);

@@ -25,7 +25,7 @@ function CoolPill({ slug, text }: CoolPillProps) {
             width="18"
             alt="HTML"
             src={"https://cdn.simpleicons.org/" + slug}
-            className="mr-0-1 w-4 transition-transform duration-300 group-hover:scale-125 lg:w-5"
+            className="mr-0-1 w-4 transition-transform duration-300 group-hover:scale-140 lg:w-5"
           />
           <span className="relative">
             <span className="animate-gradient-x text-colorfull absolute inset-0 h-full w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">

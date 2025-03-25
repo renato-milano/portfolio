@@ -20,7 +20,7 @@ export default function ProjectCard({
   technology,
 }: ProjectProps) {
   return (
-    <div className="group font-quick relative flex flex-col justify-between overflow-hidden rounded-xl transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-6 md:col-span-3 lg:col-span-4">
+    <div className="group font-quick relative flex flex-col justify-between overflow-hidden rounded-xl transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] ">
       {image && (
         <img
           className="w-full h-72 object-cover rounded-t-2xl bg-black [mask-image:linear-gradient(to_top,transparent_20%,#000_100%)]"

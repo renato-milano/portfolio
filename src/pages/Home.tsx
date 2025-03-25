@@ -1,84 +1,33 @@
-import "./App.css";
-import { useRef, useEffect, useState } from "react";
-import BlurText from "./TextAnimations/BlurText/BlurText";
-import SplitText from "./TextAnimations/SplitText/SplitText";
+import "../App.css";
+import { useRef, useEffect } from "react";
+import SplitText from "../TextAnimations/SplitText/SplitText";
 // @ts-ignore
-import RotatingText from "./TextAnimations/RotatingText/RotatingText";
-import profile from "./assets/images/profile_full.jpg";
-import FadeContent from "./Animations/FadeContent/FadeContent";
-import telegramVideo from "./assets/videos/telegram.mp4";
-import unityVideo from "./assets/videos/unity.mp4";
-import ProjectCard from "./component/ProjectCard";
-import githubLogo from "./assets/images/github-mark-white.svg";
-import handsVideo from "./assets/videos/hands.mp4";
-import MoreButton from "./component/ScrollButton";
-import CoolPill from "./component/CoolPill";
+import RotatingText from "../TextAnimations/RotatingText/RotatingText";
+import profile from "../assets/images/profile_full.jpg";
+import FadeContent from "../Animations/FadeContent/FadeContent";
+import telegramVideo from "../assets/videos/telegram.mp4";
+import unityVideo from "../assets/videos/unity.mp4";
+import ProjectCard from "../component/ProjectCard";
+import githubLogo from "../assets/images/github-mark-white.svg";
+import handsVideo from "../assets/videos/hands.mp4";
+import MoreButton from "../component/ScrollButton";
+import CoolPill from "../component/CoolPill";
 // @ts-ignore
-import ClientsGallery from "./component/ClientsGallery";
-import NavBar from "./component/NavBar";
+import ClientsGallery from "../component/ClientsGallery";
+import NavBar from "../component/NavBar";
 import { useNavigate } from "react-router-dom";
-function App() {
-  const firstStep = useRef<HTMLDivElement>(null);
-  const secondStep = useRef<HTMLDivElement>(null);
+
+function Home() {
   const thirdStep = useRef<HTMLDivElement>(null);
-  const stepZero = useRef<HTMLDivElement>(null);
-  const navbar = useRef<HTMLDivElement>(null);
-  const [NavVisible,setNavVisible] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     document.documentElement.classList.add("dark"); // Forza il tema scuro
     localStorage.setItem("theme", "dark"); // Imposta il tema salvato
   }, []);
-  let hey = "Hello there!";
-  let TitleClass = "text-white md:text-bigger text-[5vh] font-quick";
   let HeaderClass = "text-white md:text-bigger text-[3vh] font-quick";
-  function handleAnimationComplete() {
-    console.log("Animation completed!");
-    setTimeout(() => {
-      if (firstStep.current) {
-        firstStep.current.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 500);
-    setTimeout(() => {
-      if (secondStep.current) {
-        secondStep.current.style.transition = "opacity 1.5s ease";
-        secondStep.current.style.opacity = "0";
-      }
-    }, 3000);
-    setTimeout(() => {
-      if (thirdStep.current) {
-        //thirdStep.current.scrollIntoView({ behavior: "smooth" });
-        secondStep.current?.remove();
-        firstStep.current?.remove();
-        stepZero.current?.remove();
-        window.scrollTo(0, 0);
-        setNavVisible(true);
-      }
-    }, 4000);
-  }
   return (
     <div className="bg-black dark px-[2rem]">
-      <NavBar reference={navbar} show={NavVisible} className=""></NavBar>
-      <div ref={stepZero} className="text-center flex flex-col justify-center items-center h-screen">
-        <SplitText
-          text={hey}
-          className={TitleClass}
-          delay={150}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          threshold={0.2}
-          rootMargin="-50px"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
-      </div>
-      <div
-        ref={firstStep}
-        className="text-center flex flex-col justify-center items-center h-screen"
-      >
-        <div ref={secondStep}>
-          <BlurText text="Who am I?" className={TitleClass} />
-        </div>
-      </div>
+      <NavBar show={true}></NavBar>
       <div ref={thirdStep} id="Home" className="h-12"></div>
       <div className="h-screen md:h-full">
         <div className="text-center flex flex-col justify-between items-center h-[90%] md:h-full">
@@ -153,7 +102,7 @@ function App() {
               easing="ease-out"
               initialOpacity={0}
             >
-              <div className="font-quick text-gray-400 text-[1.7vh] md:text-3xl rounded-xl border-white  p-4 mt-5 lg:mt-[1vh] xl:mt-[5vh] md:mt-10 transform-gpu bg-black">
+              <div className="font-quick text-gray-400 text-[1.7vh] md:text-3xl rounded-xl border-white  p-4 mt-5 lg:mt-[1vh] xl:mt-[5vh] md:mt-15 transform-gpu bg-black">
                 I help founders turn <span className="text-white">ideas</span>{" "}
                 into creative and functional
                 <span className="text-white"> solutions.</span>
@@ -188,10 +137,9 @@ function App() {
                 <div className="border border-gray-600/25 bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800 text-gray-100/75 font-quick py-2 px-6 rounded-lg transition duration-300 font-quick text-xs">
                   Download CV
                 </div>
-                <div                 onClick={
+                <div                  onClick={
                   ()=>{navigate("/BookCall",{replace:true})}
-                }
-                className="border border-gray-600/25 bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800 text-gray-100/75 font-quick py-2 px-6 rounded-lg transition duration-300 font-quick text-xs">
+                } className="border border-gray-600/25 bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800 text-gray-100/75 font-quick py-2 px-6 rounded-lg transition duration-300 font-quick text-xs">
                   Book a Call
                 </div>
               </div>
@@ -444,8 +392,8 @@ function App() {
               <div
                 className="border border-gray-600/25 flex gap-4 font-quick py-1 px-6 items-center justify-center gap-2 rounded-xl bg-neutral-900 px5 py-2 shadow-[inset_0_2px_10px_#ffffff1f] rounded-lg transition duration-300 font-quick text-xs"
                 onClick={
-                  ()=>{navigate("/BookCall",{replace:true})}
-                }
+                    ()=>{navigate("/BookCall",{replace:true})}
+                  }
               >
                 Book a Call
               </div>
@@ -463,4 +411,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
