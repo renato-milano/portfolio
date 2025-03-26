@@ -10,7 +10,7 @@ const ClientsGallery = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   return (
-    <div className="group relative bg-black rounded-xl h-[25vw] grid grid-cols-1 flex items-center border-2 justify-center overflow-hidden transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]">
+    <div className="group relative bg-black rounded-xl h-96 md:h-[25vw] grid grid-cols-1 flex items-center border-2 justify-center overflow-hidden transform-gpu bg-black [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]">
       {/* Sfondo con sfumatura */}
       <div
         className="absolute inset-0"
@@ -22,7 +22,7 @@ const ClientsGallery = () => {
       {/* Contenitore video */}
       <div
         aria-hidden="true"
-        className="flex absolute top-24 left-[52%] -translate-x-1/2 -translate-y-30 top-[50%] lg:top-[45%] "
+        className="flex absolute left-[52%] -translate-x-1/2 -translate-y-30 top-[50%] md:top-[55%] lg:top-[45%] "
       >
         {videos.map((src, index) => {
           // Calcoliamo la traslazione dinamica
@@ -56,7 +56,7 @@ const ClientsGallery = () => {
           return (
             <div
               key={index}
-              className={`group w-32 lg:w-40 overflow-hidden rounded-xl border-2 border-white/30 shadow-2xl shadow-black transition-all transform-gpu 
+              className={`group w-[12vh] md:w-32 lg:w-40 overflow-hidden rounded-xl border-2 border-white/30 shadow-2xl shadow-black transition-all transform-gpu 
                   ${index % 2 === 0 ? "rotate-12 " : "-rotate-12 "} 
                   hover:rotate-0 hover:scale-120`}
               style={{
@@ -80,7 +80,7 @@ const ClientsGallery = () => {
             </div>
           );
         })}
-        <div className="absolute p-4 group-hover:-translate-y-5 transition flex-col items-start duration-300 group-hover:shadow-4xl inset-0 h-[50%] lg:top-55 top-50 md:right-30 right-60 w-[80%] md:w-[90%] lg:w-[95%] pl-25 sm:pl-20 xl:pl-10 flex items-center justify-center text-white text-xl font-bold">
+        <div className="absolute p-4 group-hover:-translate-y-5 transition flex-col items-start duration-300 group-hover:shadow-4xl inset-0 h-[50%] md:top-40 lg:top-45 top-50 md:right-30 right-60 w-[80%] md:w-[90%] lg:w-[80%] pl-15 sm:pl-20 xl:pl-10 flex items-center justify-center text-white text-xl font-bold">
           <div className="flex font-quick text-2xl text-gray-200/75 text-weight-400 text-start text-white md:text-gray-300/25 group-hover:text-white group-hover:font-bold transition duration-300">
             Collaboration
             <TbHeartHandshake className="ml-4" />

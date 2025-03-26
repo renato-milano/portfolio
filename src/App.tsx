@@ -85,7 +85,7 @@ function App() {
       <div ref={thirdStep} id="Home" className="h-12"></div>
       <div className="h-screen md:h-full">
         <div className="text-center flex flex-col justify-between items-center h-[90%] md:h-full">
-          <div className="flex flex-col md:mt-[3vh] lg:mt-[2vw] md:mt-20 justify-center items-center">
+          <div className="flex flex-col md:mt-[3vh] lg:mt-[2vw] md:mt-20 mt-8 justify-center items-center">
             <FadeContent
               blur={true}
               delay={50}
@@ -358,7 +358,7 @@ function App() {
         easing="ease-out"
         initialOpacity={0}
       >
-        <div className="mt-10 h-full w-full grid grid-cols-1 md:grid-cols-2 items-center bg-black grid border-gray-600/50 ">
+        <div className="mt-10 h-full w-full grid grid-cols-1 lg:grid-cols-2 items-center bg-black grid border-gray-600/50 ">
           <div className=" mt-10">
             <ClientsGallery />
           </div>
