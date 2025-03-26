@@ -28,7 +28,7 @@ window.addEventListener("resize",()=>{
   return (
     !false && (
       <nav className={`fixed ${isMobile?"top-0 w-screen":"top-4"} left-0 md:w-full md:flex md:justify-center flex justify-center z-50 transition duration-300 ${show ? "opacity-100" : "opacity-0"}`} ref={reference}>
-        <ul className={`flex items-center gap-4 ${isMobile?"w-full flex justify-around":"rounded-full"} border border-white/15 bg-white/15 md:px-6 md:py-2 py-1.5 backdrop-blur-sm shadow-md`}>
+        <ul className={`flex items-center gap-4 ${isMobile?"w-full flex justify-around":"rounded-full"} md:border border-b-1 border-white/15 bg-white/15 md:px-6 md:py-2 py-1.5 backdrop-blur-sm shadow-md`}>
           {menuItems.map((item, index) =>
             item.isButton ? (
               <li onClick={
