@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { IoMdArrowForward } from "react-icons/io";
-
 type NavBarProps = {
   className?:string
   reference?: React.RefObject<HTMLDivElement | null>;

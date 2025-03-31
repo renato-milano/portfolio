@@ -447,18 +447,12 @@ function App() {
             <span className="text-white">let’s make it happen!</span>
             <div className="flex flex-row justify-end items-center mt-10 space-x-4">
               <div
-                className="border border-gray-600/25 flex gap-4 font-quick py-1 px-6 items-center justify-center gap-2 rounded-xl bg-neutral-900 px5 py-2 shadow-[inset_0_2px_10px_#ffffff1f] rounded-lg transition duration-300 font-quick text-xs"
+                className="cursor-pointer border border-gray-600/25 flex gap-4 font-quick py-1 px-6 items-center justify-center gap-2 rounded-xl bg-neutral-900 px5 py-2 shadow-[inset_0_2px_10px_#ffffff1f] rounded-lg transition duration-300 font-quick text-xs"
                 onClick={() => {
                   navigate("/BookCall", { replace: true });
                 }}
               >
                 Book a Call
-              </div>
-              <div
-                className="border border-gray-600/25 flex gap-4 font-quick py-1 px-6 items-center justify-center gap-2 rounded-xl bg-neutral-900 px5 py-2 shadow-[inset_0_2px_10px_#ffffff1f] rounded-lg transition duration-300 font-quick text-xs"
-                onClick={() => {}}
-              >
-                Contact Me
               </div>
             </div>
           </div>
