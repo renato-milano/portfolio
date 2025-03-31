@@ -20,11 +20,11 @@ export default function Footer() {
         
         {/* Dati Legali */}
         <div>
-          <h3 className="text-lg font-quick">Dati Legali</h3>
-          <p className="text-sm font-quick text-gray-400">© 2025 Renato Milano. Tutti i diritti riservati.</p>
-          <p className="text-sm font-quick text-gray-400">P.IVA: 10779291219</p>
+          <h3 className="text-lg font-quick">Legal Informations</h3>
+          <p className="text-sm font-quick text-gray-400">© 2025 Renato Milano. All rights reserved.</p>
+          <p className="text-sm font-quick text-gray-400">VAT Number: 10779291219</p>
           <p className="text-sm font-quick text-gray-400">Email: renatomilanodev@gmail.com</p>
-          <p className="text-sm font-quick text-gray-400">Pec: renatomilano@pec.it</p>
+          <p className="text-sm font-quick text-gray-400">PEC: renatomilano@pec.it</p>
         </div>
       </div>
     </footer>
