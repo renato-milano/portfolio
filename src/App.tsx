@@ -243,7 +243,7 @@ function App() {
               description="Hand Detection Visualization made with P5.js and MediaPipe ML."
               buttonText="Source Code"
               technology={["Javascript", "P5.js", "ML", "MediaPipe"]}
-              onButtonClick={() => {window.open('https://renatomilano.it/', '_blank');}}
+              onButtonClick={() => {window.open('https://github.com/renato-milano', '_blank');}}
             />
           </FadeContent>
           <FadeContent
@@ -274,7 +274,7 @@ function App() {
               description="A skeleton for a React-based AI chatbot application using Groq. It provides a minimal yet extensible structure to build a chatbot UI and integrate it with Groq's API for AI-powered conversations."
               buttonText="Source Code"
               technology={["React", "Vite", "Groq", "TailwindCSS"]}
-              onButtonClick={() => {window.open('https://renatomilano.it/', '_blank');}}
+              onButtonClick={() => {window.open('https://github.com/renato-milano', '_blank');}}
             />
           </FadeContent>
           <FadeContent
@@ -311,7 +311,7 @@ function App() {
                 "Network Protocols",
                 "Deployed on Heroku",
               ]}
-              onButtonClick={() => {window.open('https://renatomilano.it/', '_blank');}}
+              onButtonClick={() => {window.open('https://github.com/renato-milano', '_blank');}}
             />
           </FadeContent>
 
@@ -343,7 +343,7 @@ function App() {
               description="A personal game development project in Unity, showcasing my passion for creating interactive experiences and understanding how things come to life."
               buttonText="Coming soon"
               technology={["C#", "Unity", "Blender", "Game Design"]}
-              onButtonClick={() => {window.open('https://renatomilano.it/', '_blank');}}
+              onButtonClick={() => {window.open('https://github.com/renato-milano', '_blank');}}
             />
           </FadeContent>
         </div>
