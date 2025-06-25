@@ -134,9 +134,6 @@ function Home() {
               initialOpacity={0}
             >
               <div className="flex flex-row justify-center items-center mt-5 lg:mt-[1vw] space-x-4">
-                <div className="border border-gray-600/25 bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800 text-gray-100/75 font-quick py-2 px-6 rounded-lg transition duration-300 font-quick text-xs">
-                  Download CV
-                </div>
                 <div
                   onClick={() => {
                     navigate("/BookCall", { replace: true });
@@ -192,7 +189,7 @@ function Home() {
               description="Hand Detection Visualization made with P5.js and MediaPipe ML."
               buttonText="Source Code"
               technology={["Javascript", "P5.js", "ML", "MediaPipe"]}
-              onButtonClick={() => {}}
+              onButtonClick={() => {window.open('https://renatomilano.it/', '_blank');}}
             />
           </FadeContent>
           <FadeContent
@@ -223,7 +220,7 @@ function Home() {
               description="A skeleton for a React-based AI chatbot application using Groq. It provides a minimal yet extensible structure to build a chatbot UI and integrate it with Groq's API for AI-powered conversations."
               buttonText="Source Code"
               technology={["React", "Vite", "Groq", "TailwindCSS"]}
-              onButtonClick={() => {}}
+              onButtonClick={() => {window.open('https://renatomilano.it/', '_blank');}}
             />
           </FadeContent>
           <FadeContent
@@ -260,7 +257,7 @@ function Home() {
                 "Network Protocols",
                 "Deployed on Heroku",
               ]}
-              onButtonClick={() => {}}
+              onButtonClick={() => {window.open('https://renatomilano.it/', '_blank');}}
             />
           </FadeContent>
 
@@ -292,7 +289,7 @@ function Home() {
               description="A personal game development project in Unity, showcasing my passion for creating interactive experiences and understanding how things come to life."
               buttonText="Coming soon"
               technology={["C#", "Unity", "Blender", "Game Design"]}
-              onButtonClick={() => {}}
+              onButtonClick={() => {window.open('https://renatomilano.it/', '_blank');}}
             />
           </FadeContent>
         </div>
